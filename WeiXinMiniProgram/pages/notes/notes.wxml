@@ -1,0 +1,12 @@
+<!--pages/notes/notes.wxml-->
+<view class='container'>
+  <view class='title'>单词本</view>
+  <view class='list'>
+  <view class='divider'></view>
+    <view class='item' wx:for="{{noteList}}" wx:key='key' data-word="{{item.word}}" bindtap='searchWord'>
+      <view class='word'>{{item.word}}</view>
+      <view class='date'>{{item.date}}</view>
+      <view class='divider'></view>
+    </view>
+  </view>
+</view>

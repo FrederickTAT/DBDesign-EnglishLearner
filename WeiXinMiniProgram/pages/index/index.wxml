@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='search'>
+    <input class='word-input' bindinput="searchInput" value="{{word}}"></input>
+    <button class='search-button' bindtap="searchWord">搜索</button>
+  </view>
+
+  <view wx:if="{{wordInfo.word}}" class='content'>
+    <view class='word' style='font-size: 60rpx;'>{{wordInfo.word}}</view>
+    <view class='levels' style='font-size:30rpx;'>{{wordInfo.levels}}</view>
+    <button class='modify-note' bindtap="addNote" hidden='{{added}}'>添加单词本</button>
+    <button class='modify-note' bindtap="deleteNote" hidden='{{!added}}'>删除单词本</button>
+    <view class='divider'></view>
+    <view class='pronunciations'>英：{{wordInfo.pronunciations[0]}}  美：{{wordInfo.pronunciations[1]}}</view>
+    <view class='divider'></view>
+    <view class="translations">
+      <view wx:for="{{wordInfo.translations}}" wx:for-item="trans" wx:key="key">
+        {{trans.property}}
+        <view style='display: inline;' wx:for="{{trans.translations}}" wx:key="key">
+          {{item}};
+        </view>
+      </view>
+    </view>
+    <view class='divider'></view>
+    <view class="sentences" style='font-size: 30rpx;'>
+      <view wx:for="{{wordInfo.sentences}}" wx:key="key">
+        <view>{{item.sentence}}</view>
+        <view style='margin:10rpx 0;'>{{item.translation}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    未查询到单词
+  </view>
+</view>

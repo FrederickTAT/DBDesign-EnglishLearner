@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/notes/notes",
+    "pages/exam/exam"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "查词"
+      },
+      {
+        "pagePath": "pages/notes/notes",
+        "text": "单词本"
+      },
+      {
+        "pagePath": "pages/exam/exam",
+        "text": "测试"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

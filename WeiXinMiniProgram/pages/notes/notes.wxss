@@ -1,0 +1,29 @@
+/* pages/notes/notes.wxss */
+.title{
+  position: absolute;
+  top:0;
+  height:100rpx;
+  font-size: 40rpx;
+}
+.list{
+  position: absolute;
+  top:100rpx;
+}
+.word{
+  padding-left:40rpx;
+  font-size:50rpx;
+  display: flex;
+  align-items: center;
+  height:100rpx;
+  width:750rpx;
+}
+.date{
+  padding-left:40rpx;
+}
+.divider{
+  left:0;
+  right:0;
+  height: 2rpx;
+  margin:0 10rpx;
+  background-color: gray;
+}

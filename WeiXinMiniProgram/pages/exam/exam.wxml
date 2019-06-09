@@ -1,0 +1,17 @@
+<!--pages/exam/exam.wxml-->
+<view class='container'>
+  <view class='intro' hidden='{{level >= 0}}'>
+    选择测试等级
+    <button class='buttons' wx:for='{{levels}}' wx:key='key' data-level='{{item}}' bindtap="selectLevel">Level {{item}}</button>
+  </view>
+  <view class='exam intro' hidden='{{level < 0}}'>
+    <button class='reset' bindtap="reset">重置</button>
+    <button class='search' bindtap="search" disabled='{{!complete}}'>查词</button>
+    <button class='skip' bindtap="fresh">下一题</button>
+    <view>正确率 {{right}}/{{finished}}</view> 
+    <view>选择单词对应的中文解释</view>
+    <view class='word' style='font-size:60rpx;margin:80rpx;'>{{wordTrans[random].word}}</view>
+    <button class='buttons' style='color:{{complete?((index==selected || index == random)?(index == random?"green":"red"):"black"):"black"}};' wx:for='{{wordTrans}}' data-ans='{{index}}' wx:key='key' bindtap="{{complete?'':'selectAnswer'}}">{{item.translation}}</button>
+    
+  </view>
+</view>

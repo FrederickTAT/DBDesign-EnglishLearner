@@ -7,9 +7,8 @@
         <servlet-name>Demo</servlet-name>
         <servlet-class>Demo</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>Demo</servlet-name>
-        <url-pattern>/Demo</url-pattern>
+        <url-pattern>/demo</url-pattern>
     </servlet-mapping>
 </web-app>
